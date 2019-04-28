@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://supviz.infos.st/precache-manifest.81c4b9c33f47a12473edb26b0327dd1b.js"
+  "https://assets.support-vision.fr/precache-manifest.fd4e0ea155b325ad606c9ab615d63855.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("https://supviz.infos.st/index.html", {
+workbox.routing.registerNavigationRoute("https://assets.support-vision.fr/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
