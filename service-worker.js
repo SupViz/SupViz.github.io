@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://assets.support-vision.fr/precache-manifest.7fe66ff6ef2398ce776dbc1f1838ec65.js"
+  "https://assets.support-vision.fr/precache-manifest.70f7f1e96e4209e3dcb9f5024ded5193.js"
 );
 
 workbox.clientsClaim();
