@@ -3,7 +3,7 @@
   "name": "Support Vision",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "https://assets.support-vision.fr/favicon.png",
       "sizes": "144x144 64x64 32x32 24x24 16x16",
       "type": "image/png"
     }
