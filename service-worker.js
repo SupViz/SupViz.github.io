@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://assets.support-vision.fr/precache-manifest.916d01e9770fd4b17d54a906c58e5e01.js"
+  "https://assets.support-vision.fr/precache-manifest.5c0fc90e7c4640fc2ee630b4708f1646.js"
 );
 
 workbox.clientsClaim();
@@ -32,3 +32,8 @@ workbox.routing.registerNavigationRoute("https://assets.support-vision.fr/index.
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
+self.addEventListener('message',function(e){if(e.data&&e.data.type==='SKIP_WAITING'){skipWaiting()}})
+workbox.routing.registerRoute(/(tags\?site=\d)|(articles\?tags=(\w*)&sortDir=(desc|asc)&sortProp=(\w+)&showFolders=(false|true)&showChildren=(false|true)&page=\d+&itemsPerPage=\d&site=\d)/,new workbox.strategies.NetworkFirst({cacheName:'h',plugins:[new workbox.expiration.Plugin({maxEntries:50,maxAgeSeconds:2592000})]}))
+workbox.routing.registerRoute(/^.+(\/articles\/)/,new workbox.strategies.NetworkFirst({cacheName:'a',plugins:[new workbox.expiration.Plugin({maxEntries:150,maxAgeSeconds:2592000})]}))
+workbox.routing.registerRoute(/^.+(\/images\/)/,new workbox.strategies.StaleWhileRevalidate({cacheName:'i',plugins:[new workbox.expiration.Plugin({maxEntries:30,maxAgeSeconds:5184000})]}))
+workbox.routing.registerRoute(/^(?!.+((disqus)|(paypal)|(service-worker.js))).+/,new workbox.strategies.StaleWhileRevalidate({cacheName:'o',plugins:[new workbox.expiration.Plugin({maxEntries:100,maxAgeSeconds:5184000})]}))
