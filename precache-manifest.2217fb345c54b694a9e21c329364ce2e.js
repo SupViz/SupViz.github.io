@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "https://assets.support-vision.fr/static/css/main.e2c4db70.chunk.css"
   },
   {
-    "revision": "52b7b26f2a3e601bc0eeebbf729389e4",
+    "revision": "7a63e58cce1cd357e10bf2d8d334efcc",
     "url": "https://assets.support-vision.fr/index.html"
   }
 ];
